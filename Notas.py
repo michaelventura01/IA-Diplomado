@@ -1,23 +1,24 @@
 print('Ingrese Nombre de Persona:')
 nombre = input()
 
-print('ingrese nota 1')
-n1 = int(input())
+cantidad = 4
+aprobado = 70
 
-print('ingrese nota 2')
-n2 = int(input())
+notas = []
+for cuenta in range(0, cantidad):
+    print('ingrese nota '+str(cuenta+1))
+    nota = int(input())
+    notas.append(nota)
 
-print('ingrese nota 3')
-n3 = int(input())
+prom = 0
+for score in range(0, cantidad):
+    prom += notas[score]
 
-print('ingrese nota 4')
-n4 = int(input())
 
-prom = int((n1+n2+n3+n4)/4)
-if(prom>70):
-    print('Promedio Generado: '+str(prom) +' Aprobado '+nombre)
+if((prom/4)>aprobado):
+    print('Promedio Generado: '+str(prom/4) +' Aprobado '+nombre)
 else:
-    print('Promedio Generado: ' + str(prom) + ' Reprobado '+nombre)
+    print('Promedio Generado: ' + str(prom/4) + ' Reprobado '+nombre)
 
 
 

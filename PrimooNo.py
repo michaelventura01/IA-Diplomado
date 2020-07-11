@@ -8,4 +8,4 @@ for count in range(2,n):
 if(multiplo==0):
     print("es primo")
 else:
-    print("ES Compuesto")
+    print("Es Compuesto")
